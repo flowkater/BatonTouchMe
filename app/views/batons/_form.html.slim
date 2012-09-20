@@ -1,0 +1,14 @@
+= simple_form_for @baton, :html => { :class => "form-horizontal" } do |f|
+  = f.input :taskname
+  = f.input :phone
+  = f.input :detail
+  = f.input :address
+  = f.input :date
+  = f.input :time
+  = f.input :status
+  = f.input :runner_id
+  = f.input :wish_id
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    '
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), batons_path, :class => 'btn'

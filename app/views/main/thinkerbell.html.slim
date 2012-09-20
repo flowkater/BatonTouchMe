@@ -1,0 +1,20 @@
+.container
+	.hero-unit#runnerinfo
+		| ThinkerBell's Image + Text
+
+		= link_to "Choose", runners_thinkerbell_regist4_path, class: 'pull-right btn btn-primary'
+
+	.tabbable
+		ul.nav.nav-tabs
+			li.active
+				a href="#photo" data-toggle="tab" 사진
+			li 
+				a href="#review" data-toggle="tab" 리뷰
+		.tab-content
+			.tab-pane.active#photo
+				.hero-unit
+					p Here Photo
+			.tab-pane#review
+				.hero-unit
+					p Here Review
+

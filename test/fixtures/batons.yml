@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  taskname: MyString
+  phone: MyString
+  detail: MyText
+  address: MyString
+  date: 2012-09-20
+  time: MyString
+  status: MyString
+  runner_id: 1
+  wish_id: 1
+
+two:
+  taskname: MyString
+  phone: MyString
+  detail: MyText
+  address: MyString
+  date: 2012-09-20
+  time: MyString
+  status: MyString
+  runner_id: 1
+  wish_id: 1
