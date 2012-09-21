@@ -24,18 +24,18 @@ class MainController < ApplicationController
   end
 
   def regist1
-    
+    @baton = Baton.new   
   end
 
   def regist2
-    
+    @baton = Baton.new
   end
 
   def regist3
-    
+    @baton = Baton.new
   end
 
   def regist4
-    
+    @baton = Baton.new
   end
 end

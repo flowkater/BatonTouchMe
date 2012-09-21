@@ -1,8 +1,32 @@
 @import "bootstrap";
 
+.forminput{
+	width: 70%;
+	height: 30px;
+}
+
 #runner{
 	margin-left: 0.2%;
 	width: 24%;
+}
+
+#baton_taskname, #baton_phone, #baton_address, #baton_date, #baton_time{
+	width: 70%;
+	height: 30px;
+}
+
+#baton_detail{
+	width: 70%;
+	height: 200px;
+}
+
+#inputcenter{
+	margin: 0 auto auto 0;
+	display: inline-block;
+}
+
+#createbtn{
+	padding-left: 55%;
 }
 
 #runnerinfo{
