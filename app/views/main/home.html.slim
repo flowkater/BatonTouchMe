@@ -1,2 +1,25 @@
-.hero-unit
-	| Slide
+#myCarousel.carousel.slide
+	.carousel-inner
+		.active.item
+			= image_tag "slide1.png", size: "1940x688"
+			.carousel-caption#carousel-form
+				form
+					.input-apped align="center"
+						input.span8#appendedInputButton
+						button.btn.btn-primary BatonTouch!
+		.item
+			= image_tag "main2.jpg", size: "1940x688"
+			.carousel-caption#carousel-form
+				form
+					.input-apped align="center"
+						input.span8#appendedInputButton
+						button.btn.btn-primary BatonTouch!
+		.item
+			= image_tag "main3.jpg", size: "1940x688"
+			.carousel-caption#carousel-form
+				form
+					.input-apped align="center"
+						input.span8#appendedInputButton
+						button.btn.btn-primary BatonTouch!
+	a.carousel-control.left href="#myCarousel" data-slide="prev" &lsaquo;
+	a.carousel-control.right href="#myCarousel" data-slide="next" &rsaquo;

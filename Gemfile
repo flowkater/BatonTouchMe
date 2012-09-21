@@ -11,7 +11,8 @@ gem 'thin'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'fullcalendar-rails'
-gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 gem 'bootstrap-timepicker-rails', :require => 'bootstrap-timepicker-rails',
                               :git => 'git://github.com/tispratik/bootstrap-timepicker-rails.git'
 gem 'simple_form'
@@ -23,10 +24,11 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass', '~> 2.1.0.0'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  gem 'less'
   gem 'execjs'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails'
+  # gem 'twitter-bootstrap-rails'
 end
 
 group :development do

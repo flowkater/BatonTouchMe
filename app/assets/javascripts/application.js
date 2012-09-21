@@ -12,6 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require bootstrap
+//= require bootstrap-datepicker/core
+//= require bootstrap-timepicker
 //= require_tree .
+
+
+$(document).ready(function(){
+	$('.carousel').carousel({
+		interval: 3000
+	});
+	$('.datepicker').datepicker({"format":"yyyy-mm-dd"});
+	$('.timepicker').timepicker();
+});
