@@ -15,6 +15,7 @@ gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
 gem 'bootstrap-timepicker-rails', :require => 'bootstrap-timepicker-rails',
                               :git => 'git://github.com/tispratik/bootstrap-timepicker-rails.git'
 gem 'simple_form'
+gem 'ransack'
 
 # Gems used only for assets and not required
 # in production environments by default.

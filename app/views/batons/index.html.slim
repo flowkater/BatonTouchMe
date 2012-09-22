@@ -11,9 +11,6 @@ table class="table table-striped"
       th= model_class.human_attribute_name(:address)
       th= model_class.human_attribute_name(:date)
       th= model_class.human_attribute_name(:time)
-      th= model_class.human_attribute_name(:status)
-      th= model_class.human_attribute_name(:runner_id)
-      th= model_class.human_attribute_name(:wish_id)
       th= model_class.human_attribute_name(:created_at)
       th=t '.actions', :default => t("helpers.actions")
   tbody
@@ -26,9 +23,6 @@ table class="table table-striped"
         td= baton.address
         td= baton.date
         td= baton.time
-        td= baton.status
-        td= baton.runner_id
-        td= baton.wish_id
         td=l baton.created_at
         td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_baton_path(baton), :class => 'btn btn-mini'

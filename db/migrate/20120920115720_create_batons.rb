@@ -9,7 +9,8 @@ class CreateBatons < ActiveRecord::Migration
       t.string :time
       t.string :status
       t.string :wish
-      t.integer :runner_id
+      t.string :tasknumber
+      t.string :runner
 
       t.timestamps
     end

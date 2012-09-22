@@ -1,0 +1,7 @@
+.container
+	= form_for(:session, url: sessions_path) do |f|
+		.field
+			= f.label :authkey
+			= f.text_field :authkey
+		.actions
+			= f.submit "인증"

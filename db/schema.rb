@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120920115720) do
+ActiveRecord::Schema.define(:version => 20120922110409) do
 
   create_table "batons", :force => true do |t|
     t.string   "taskname"
@@ -22,9 +22,29 @@ ActiveRecord::Schema.define(:version => 20120920115720) do
     t.string   "time"
     t.string   "status"
     t.string   "wish"
-    t.integer  "runner_id"
+    t.string   "tasknumber"
+    t.string   "runner"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "keys", :force => true do |t|
+    t.string   "authkey"
+    t.string   "remember_token"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "keys", ["authkey"], :name => "index_keys_on_authkey", :unique => true
+  add_index "keys", ["remember_token"], :name => "index_keys_on_remember_token"
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "baton_id"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "reviews", ["baton_id"], :name => "index_reviews_on_baton_id"
 
 end

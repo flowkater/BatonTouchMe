@@ -98,6 +98,8 @@ GEM
       jruby-pageant (>= 1.1.1)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
+    polyamorous (0.5.0)
+      activerecord (~> 3.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -123,6 +125,10 @@ GEM
       thor (~> 0.14.6)
     raindrops (0.10.0)
     rake (0.9.2.2)
+    ransack (0.7.0)
+      actionpack (~> 3.0)
+      activerecord (~> 3.0)
+      polyamorous (~> 0.5.0)
     rdoc (3.12)
       json (~> 1.4)
     rmagick (2.13.1)
@@ -188,6 +194,7 @@ DEPENDENCIES
   less
   mysql2
   rails (= 3.2.2)
+  ransack
   rmagick
   sass-rails (~> 3.2.3)
   simple_form

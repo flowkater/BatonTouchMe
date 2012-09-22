@@ -26,18 +26,6 @@ p
   strong= model_class.human_attribute_name(:time) + ':'
   br
   = @baton.time
-p
-  strong= model_class.human_attribute_name(:status) + ':'
-  br
-  = @baton.status
-p
-  strong= model_class.human_attribute_name(:runner_id) + ':'
-  br
-  = @baton.runner_id
-p
-  strong= model_class.human_attribute_name(:wish_id) + ':'
-  br
-  = @baton.wish_id
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), batons_path, :class => 'btn'

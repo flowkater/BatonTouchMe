@@ -4,6 +4,27 @@ abbr{
 	display: none;
 }
 
+#con-resize{
+	width: 700px;
+}
+
+.batonbtn{
+	width: 300px;
+	height: 20px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.tasknumbernone{
+	display: none;
+}
+
+#appendInputButton{
+	margin-left: 20%;
+	height: 33px;
+}
+
 .forminput{
 	width: 70%;
 	height: 30px;
@@ -31,6 +52,10 @@ abbr{
 #inputcenter{
 	margin: 0 auto auto 0;
 	display: inline-block;
+}
+
+#batoncenter{
+	text-align: center;
 }
 
 #createbtn{
