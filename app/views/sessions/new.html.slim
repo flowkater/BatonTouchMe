@@ -1,6 +1,10 @@
 .container
 	br
 	.hero-unit
+		- flash.each do |name, msg|
+			div class="alert alert-#{name == :notice ? 'success' : 'error'}"
+				a.close data-dismiss="alert" x
+				= msg
 		h3 align="center"
 			| 인증번호를 넣고 당신의 바톤을 전달하세요!
 		= simple_form_for(:session, url: sessions_path, html: {class: "form-horizontal"}) do |f|

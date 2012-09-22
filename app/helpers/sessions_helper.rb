@@ -1,33 +1,34 @@
+#encoding: UTF-8
 module SessionsHelper
-  def sign_in(key)
-    cookies.permanent[:remember_token] = key.remember_token
-    self.current_key = key
+  def sign_in(authkey)
+    cookies.permanent[:remember_token] = authkey.remember_token
+    self.current_authkey = authkey
   end
 
   def signed_in?
-    !current_key.nil?
+    !current_authkey.nil?
   end
 
   def sign_out
     cookies.delete(:remember_token)
   end
 
-  def current_key=(key)
-    @current_key = key
+  def current_authkey=(authkey)
+    @current_authkey = authkey
   end
 
-  def current_key
-    @current_key ||= key_from_remember_token
+  def current_authkey
+    @current_authkey ||= authkey_from_remember_token
   end
 
-  def current_key?(key)
-    key == current_key
+  def current_authkey?(authkey)
+    authkey == current_authkey
   end
 
-  def signed_in_key
+  def signed_in_authkey
     unless signed_in?
       store_location
-      redirect_to signin_path, notice: "Please sign in."
+      redirect_to signin_path, notice: "인증번호를 넣어주세요^^"
     end
   end
 
@@ -41,9 +42,9 @@ module SessionsHelper
   end
 
   private
-    def key_from_remember_token
+    def authkey_from_remember_token
         remember_token = cookies[:remember_token]
-          Key.find_by_remember_token(remember_token) unless remember_token.nil?
+          Authkey.find_by_remember_token(remember_token) unless remember_token.nil?
     end
 
     def clear_return_to

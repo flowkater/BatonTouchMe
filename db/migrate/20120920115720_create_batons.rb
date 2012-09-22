@@ -11,10 +11,10 @@ class CreateBatons < ActiveRecord::Migration
       t.string :wish
       t.integer :runner_id, default: 0
       t.integer :anywork
-      t.integer :key_id
+      t.integer :authkey_id
 
       t.timestamps
     end
-    add_index :batons, :key_id
+    add_index :batons, :authkey_id
   end
 end

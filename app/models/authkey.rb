@@ -1,5 +1,5 @@
-class Key < ActiveRecord::Base
-	attr_accessible :authkey
+class Authkey < ActiveRecord::Base
+	attr_accessible :authkey, :genkeys
 
 	has_many :batons
 

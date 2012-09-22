@@ -13,6 +13,17 @@
 
 ActiveRecord::Schema.define(:version => 20120922110409) do
 
+  create_table "authkeys", :force => true do |t|
+    t.string   "authkey"
+    t.string   "genkeys"
+    t.string   "remember_token"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "authkeys", ["authkey"], :name => "index_authkeys_on_authkey", :unique => true
+  add_index "authkeys", ["remember_token"], :name => "index_authkeys_on_remember_token"
+
   create_table "batons", :force => true do |t|
     t.string   "taskname"
     t.string   "phone"
@@ -24,22 +35,12 @@ ActiveRecord::Schema.define(:version => 20120922110409) do
     t.string   "wish"
     t.integer  "runner_id",  :default => 0
     t.integer  "anywork"
-    t.integer  "key_id"
+    t.integer  "authkey_id"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
   end
 
-  add_index "batons", ["key_id"], :name => "index_batons_on_key_id"
-
-  create_table "keys", :force => true do |t|
-    t.string   "authkey"
-    t.string   "remember_token"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-  end
-
-  add_index "keys", ["authkey"], :name => "index_keys_on_authkey", :unique => true
-  add_index "keys", ["remember_token"], :name => "index_keys_on_remember_token"
+  add_index "batons", ["authkey_id"], :name => "index_batons_on_authkey_id"
 
   create_table "reviews", :force => true do |t|
     t.integer  "baton_id"
