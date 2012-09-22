@@ -3,6 +3,8 @@ class MainController < ApplicationController
   before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
                                       :regist3,:regist4,:create,:create1,
                                       :create2,:create3,:create4]
+  before_filter :baton_greater, only: [:regist,:regist1,:regist2,
+                                      :regist3,:regist4]                                      
   # before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
   #                                     :regist3,:regist4,:create,:create1,
   #                                     :create2,:create3,:create4,
@@ -119,5 +121,12 @@ class MainController < ApplicationController
 
   def baton
     @baton = Baton.new
+  end
+
+  def baton_greater
+    if current_authkey.batons.size >= 1
+      flash[:notice] = "바톤을 한개 이상 생성할 수 없습니다^^"
+      redirect_to root_path
+    end
   end
 end
