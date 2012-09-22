@@ -7,12 +7,14 @@ class CreateBatons < ActiveRecord::Migration
       t.string :address
       t.date :date
       t.string :time
-      t.string :status
+      t.integer :status_id, default: 0
       t.string :wish
-      t.string :tasknumber
-      t.string :runner
+      t.integer :runner_id, default: 0
+      t.integer :anywork
+      t.integer :key_id
 
       t.timestamps
     end
+    add_index :batons, :key_id
   end
 end

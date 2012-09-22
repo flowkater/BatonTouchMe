@@ -1,37 +1,43 @@
-.container#con-resize
-	#runnerinfo
-		= image_tag "jen/main_page.png"
-		h1 일단, 사람 + 대딩이 할 수 있는 건 왠만하면 다 할 수 있다! 잔심부름 시켜두 돼요!
-		= link_to "Choose", runners_thinkerbell_regist4_path, class: 'pull-right btn btn-primary'
+.background
 	br
-	.tabbable
-		ul.nav.nav-tabs
-			li.active
-				a href="#photo" data-toggle="tab" 사진
-			li 
-				a href="#review" data-toggle="tab" 리뷰
-		.tab-content
-			.tab-pane.active#photo
-				= image_tag "jen/jen_2.png"
-				= image_tag "jen/jen_3.png"
-				h3 1.Thinkerbell’s Choice 
-				p 세기의 고민: 오늘 점심 뭐 먹어? 내일은 뭘 입지? 머리를 잘라, 말아?   
-				p 친구들을 만나도 뭐 먹을지 항상 고민이고, 하루 하루 내일은 또 어떻게 옷을 입을지에 답은 항상 없고, 미용실 갈 때마다 예쁜 헤어스타일 찾느라 쏟은 시간이 도대체 얼만지 [사진 문구: 우리들의 소중한 시간, 소중하게 쓰자! ] 우리 다 이런 고민들로 더 이상 시간낭비하기 싫은 거 알아서 내가 해주기로 했다. 위치에 따라서 그 주위 맛집조사, 계절과 상황별 코디 스타일 찾기, 내 머리 길이로 가능한 제일 예쁜 머리 스타일 검색.. 내가 그동안 투자한 시간으로 쌓인 스킬 이제 좀 써먹고 싶다.
-				= image_tag "jen/jen_4.png"
-				= image_tag "jen/jen_5.png"
-				= image_tag "jen/jen_6.png"
-				h3 2.무엇을 사올까요?
-				p 똑소리나게 장보기
-				p 직장 때문에, 학교 때문에, 자식들 뒷바라지 때문에 장보러 가는 게 너무 번거로운 요즘이다. 웰빙 시대에 싱싱도 생각하면 대형마트에서 한꺼번에 사서 쌓아놓기도 에메하고. 숨이라도 돌리며 쉽게 해결 하려고 TV와 인터넷으로 홈쇼핑하지만 직접 보고 사는 게 아니라 불안한 마음은 어쩔 수 없다. 믿을 수 있는 우리 딸, 아니면 그 친구들한테 시킬 수 있다면 좋을텐데 다들 너무 바쁘다. 이럴 때 내가 딸 노릇 좀 하면 어떠려나? 
-				= image_tag "jen/jen_7.png"
-				h3 3.Man + translator = manslator! 남자들을 위한 인간 번역기
-				p 화성에서 온 남자들은 금성 여자들의 언어를 배울 필요가 있다! 
-				p '기껏 열심히 준비한 데이트 끝에 뾰루퉁 해 보이는 여자는 뭐지..’ ‘내가 이렇게 신경쓰는데 왜 자기 사랑안하는 거 같다고 징징대는 거야..’. 생각의 차이, 표현하는 방법의 차이 때문에 필요없는 싸움이 늘어가는 커플들이 내 주위에도 수도 없다. 그럴 때 마다 남자인 친구들 앉혀 놓고 해석해주기를 몇 년이다. 우리 여자들이 말하는 ‘미친 센스’를 보이는 남자가 되려면 어떤 것들이 있는지 더 많은 남자들이 알아야 한다. 그들의 행복한 연애를 위해.    
-				= image_tag "jen/jen_8.png"
-				h3 4.Be 파파라치ed!
-				p 느낌있는 도촬 사진은 다들 누가 그리 찍어주는 거?
-				p 요즘에는 찍는 과정도 민망하고, 찍어도 배경은 못 담아서 셀카는 늘 아쉬움이 남아. 친구들하고 웃고 떠드는 모습, 남자친구 여자친구와 데이트하는 모습, 자연스럽게, 스타들의 파파라치 처럼 남기고 싶은데 매번 누구한테 부탁하기는 너무 에메하다. 우리가 원하는 건 꼭 고화질의 DSLR로 찍은 사진이 아니라도 이쁘게 나온 폰사진 정돈데. 그걸 해줄 사람이 없어서 남는 사진이 없다. 이 고민 나 뿐이 아닐꺼라 확신한다. 결코 싸게 사지 못한 내 갤쓰리로 사진 좀 찍어볼까. 
-				= image_tag "jen/jen_wishlist.png"
-			.tab-pane#review
-				.hero-unit
-					p Here Review
+	.container#con-resize
+		br
+		.con-back
+			#runnerinfo
+				= image_tag "jen/main_page.png"
+				h1 일단, 사람 + 대딩이 할 수 있는 건 왠만하면 다 할 수 있다! 잔심부름 시켜두 돼요!
+				= link_to "바톤 전달하기", runners_thinkerbell_regist4_path, class: 'pull-right btn btn-primary'
+			br
+			.tabbable
+				ul.nav.nav-tabs
+					li.active
+						a href="#photo" data-toggle="tab" 사진
+					li 
+						a href="#review" data-toggle="tab" 리뷰
+				.tab-content
+					.tab-pane.active#photo
+						= image_tag "jen/jen_2.png"
+						= image_tag "jen/jen_3.png"
+						h3 1.Thinkerbell’s Choice 
+						p 세기의 고민: 오늘 점심 뭐 먹어? 내일은 뭘 입지? 머리를 잘라, 말아?   
+						p 친구들을 만나도 뭐 먹을지 항상 고민이고, 하루 하루 내일은 또 어떻게 옷을 입을지에 답은 항상 없고, 미용실 갈 때마다 예쁜 헤어스타일 찾느라 쏟은 시간이 도대체 얼만지 [사진 문구: 우리들의 소중한 시간, 소중하게 쓰자! ] 우리 다 이런 고민들로 더 이상 시간낭비하기 싫은 거 알아서 내가 해주기로 했다. 위치에 따라서 그 주위 맛집조사, 계절과 상황별 코디 스타일 찾기, 내 머리 길이로 가능한 제일 예쁜 머리 스타일 검색.. 내가 그동안 투자한 시간으로 쌓인 스킬 이제 좀 써먹고 싶다.
+						= image_tag "jen/jen_4.png"
+						= image_tag "jen/jen_5.png"
+						= image_tag "jen/jen_6.png"
+						h3 2.무엇을 사올까요?
+						p 똑소리나게 장보기
+						p 직장 때문에, 학교 때문에, 자식들 뒷바라지 때문에 장보러 가는 게 너무 번거로운 요즘이다. 웰빙 시대에 싱싱도 생각하면 대형마트에서 한꺼번에 사서 쌓아놓기도 에메하고. 숨이라도 돌리며 쉽게 해결 하려고 TV와 인터넷으로 홈쇼핑하지만 직접 보고 사는 게 아니라 불안한 마음은 어쩔 수 없다. 믿을 수 있는 우리 딸, 아니면 그 친구들한테 시킬 수 있다면 좋을텐데 다들 너무 바쁘다. 이럴 때 내가 딸 노릇 좀 하면 어떠려나? 
+						= image_tag "jen/jen_7.png"
+						h3 3.Man + translator = manslator! 남자들을 위한 인간 번역기
+						p 화성에서 온 남자들은 금성 여자들의 언어를 배울 필요가 있다! 
+						p '기껏 열심히 준비한 데이트 끝에 뾰루퉁 해 보이는 여자는 뭐지..’ ‘내가 이렇게 신경쓰는데 왜 자기 사랑안하는 거 같다고 징징대는 거야..’. 생각의 차이, 표현하는 방법의 차이 때문에 필요없는 싸움이 늘어가는 커플들이 내 주위에도 수도 없다. 그럴 때 마다 남자인 친구들 앉혀 놓고 해석해주기를 몇 년이다. 우리 여자들이 말하는 ‘미친 센스’를 보이는 남자가 되려면 어떤 것들이 있는지 더 많은 남자들이 알아야 한다. 그들의 행복한 연애를 위해.    
+						= image_tag "jen/jen_8.png"
+						h3 4.Be 파파라치ed!
+						p 느낌있는 도촬 사진은 다들 누가 그리 찍어주는 거?
+						p 요즘에는 찍는 과정도 민망하고, 찍어도 배경은 못 담아서 셀카는 늘 아쉬움이 남아. 친구들하고 웃고 떠드는 모습, 남자친구 여자친구와 데이트하는 모습, 자연스럽게, 스타들의 파파라치 처럼 남기고 싶은데 매번 누구한테 부탁하기는 너무 에메하다. 우리가 원하는 건 꼭 고화질의 DSLR로 찍은 사진이 아니라도 이쁘게 나온 폰사진 정돈데. 그걸 해줄 사람이 없어서 남는 사진이 없다. 이 고민 나 뿐이 아닐꺼라 확신한다. 결코 싸게 사지 못한 내 갤쓰리로 사진 좀 찍어볼까. 
+						= image_tag "jen/jen_wishlist.png"
+					.tab-pane#review
+						.hero-unit
+							p Here Review
+		br						
+	br

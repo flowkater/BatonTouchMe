@@ -1,7 +1,7 @@
 .container
   .hero-unit
     | Casanova's Picture
-  = simple_form_for @baton, :html => { :class => "form-horizontal" } do |f|
+  = simple_form_for @baton,url:{controller:"main", action: "create2"}, :html => { :class => "form-horizontal" } do |f|
     = f.input :taskname, label:"어떤 일을 시키실래요?", placeholder: "ex) 짐 옮겨 주세요!"
     = f.input :phone, label: "전화번호", placeholder: "ex) 010-5555-5555"
     = f.input :detail, label: "세부사항", placeholder: "ex) 부재중에는 경비실에 맡겨주세요! 안에 든 물건이 약하니 파손되지 않도록 신경써주세요!", hint: "일을 할때 필요한 모든 상세사항을 적어주세요!"

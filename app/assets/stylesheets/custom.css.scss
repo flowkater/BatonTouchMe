@@ -12,8 +12,34 @@ abbr{
 	margin-left: 50%;
 }
 
+#con-info{
+	width: 940px;
+	background-color: #fff;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+p#title{
+	font-weight: bold;
+}
+
+.con-info-inner{
+	width: 850px;
+	margin-left: 3%;
+}
+
 #con-resize{
+	width: 800px;
+	background-color: #fff;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+.con-back{
 	width: 700px;
+	margin-left: 6%;
 }
 
 .batonbtn{
@@ -42,14 +68,24 @@ abbr{
 	background: none;
 }
 
+.background{
+	background-image: url("/assets/bg.png");
+}
+
 #runner{
 	margin-left: 0.2%;
 	width: 24%;
 }
 
-#baton_taskname, #baton_phone, #baton_address, #baton_date, #baton_time,#session_authkey{
+#baton_taskname, #baton_phone, #baton_address, #baton_date, #baton_time{
 	width: 70%;
 	height: 32px;
+}
+
+#session_authkey{
+	width: 70%;
+	height: 32px;
+	margin-left: 3%;
 }
 
 #baton_detail{
@@ -68,6 +104,14 @@ abbr{
 
 #createbtn{
 	padding-left: 55%;
+}
+
+#authbtn{
+	padding-left: 40%;
+}
+
+#choosebtn{
+	padding-left: 23%;
 }
 
 #runnerinfo{

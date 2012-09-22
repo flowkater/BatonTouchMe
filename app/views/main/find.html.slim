@@ -1,30 +1,67 @@
-.container
-	.hero-unit
-		h3 align="center"
-			| 바톤의 고유번호를 넣고 당신의 바톤을 찾으세요!
-		= search_form_for @search, url: find_path(@search) do |f|
-			= f.label :tasknumber_cont, "바톤 고유 번호", class: "tasknumbernone"
-			= f.text_field :tasknumber_cont, class: "span6", id: "appendInputButton", placeholder: "       고유번호를 넣어주세요!"
-			= f.submit '바톤 찾기', class: 'btn btn-primary'
-
-
-#myModal.modal.hide.fade
-	.modal-body
-		button type="button" class="close" data-dismiss="modal" aria-hidden="true" &times;	
+.background
+	br
+	.container#con-resize
+		- unless @batons.empty?
+			h3#batoncenter 내 바톤은 어디에?
+			#batoncenter
+				- @batons.each do |baton|
+					- if baton.runner_id.eql?(1)
+						p Daniel
+						- if baton.status_id.eql?(0)
+							p 등록 완료!
+						- elsif baton.status_id.eql?(1)
+							p 진행중!
+						- elsif baton.status_id.eql?(2)
+							p 터치 다운!(완료!)
+					- elsif baton.runner_id.eql?(2)
+						p Casa
+						- if baton.status_id.eql?(0)
+							p 등록 완료!
+						- elsif baton.status_id.eql?(1)
+							p 진행중!
+						- elsif baton.status_id.eql?(2)
+							p 터치 다운!(완료!)
+					- elsif baton.runner_id.eql?(3)
+						p Hulk
+						- if baton.status_id.eql?(0)
+							p 등록 완료!
+						- elsif baton.status_id.eql?(1)
+							p 진행중!
+						- elsif baton.status_id.eql?(2)
+							p 터치 다운!(완료!)
+					- elsif baton.runner_id.eql?(4)
+						p ThinkerBell
+						- if baton.status_id.eql?(0)
+							p 등록 완료!
+						- elsif baton.status_id.eql?(1)
+							p 진행중!
+						- elsif baton.status_id.eql?(2)
+							p 터치 다운!(완료!)
+					- else
+						p Anyone
+						- if baton.status_id.eql?(0)
+							p 등록 완료!
+						- elsif baton.status_id.eql?(1)
+							p 진행중!
+						- elsif baton.status_id.eql?(2)
+							p 터치 다운!(완료!)
+					p 바톤 이름 
+					= baton.taskname
+					p 어디서 
+					= baton.address
+					p 날짜 
+					= baton.date
+					p 시간 
+					= baton.time
+					p 누가 
+					= baton.runner_id
+					p WishList 
+					= baton.wish
+		- else
+			h3#batoncenter 바톤을 아직 전달하지 않았어요!
+			#choosebtn
+				= link_to "Runner 고르기", runners_path ,class: 'btn btn-info btn-large'
+				'
+				= link_to "BatonTouch NOW!", runners_regist_path, class: 'btn btn-success btn-large'
 		br
-		h3#batoncenter 내 바톤은 어디에?
-		#batoncenter
-			- @baton.each do |baton|
-				p 바톤 이름 
-				= baton.taskname
-				p 어디서 
-				= baton.address
-				p 날짜 
-				= baton.date
-				p 시간 
-				= baton.time
-				p 누가 
-				= baton.runner
-				p WishList 
-				= baton.wish
-
+	br

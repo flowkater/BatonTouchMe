@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
-  # before_filter :signed_in_key, only: [:new]
   def new
+    redirect_back_or find_path if current_key
   end
 
   def create
@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if @key
       # signin Success! create Session
       sign_in(@key)
-      redirect_to root_path
+      redirect_back_or root_path
     else
       render 'new'
     end

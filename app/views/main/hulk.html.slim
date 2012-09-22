@@ -1,19 +1,25 @@
-.container#con-resize
-	.hero-unit#runnerinfo
-		| Hulk's Image + Text
+.background
+	br
+	.container#con-resize
+		br
+		.con-back
+			.hero-unit#runnerinfo
+				| Hulk's Image + Text
 
-		= link_to "Choose", runners_hulk_regist3_path, class: 'pull-right btn btn-primary'
+				= link_to "바톤 전달하기", runners_hulk_regist3_path, class: 'pull-right btn btn-primary'
 
-	.tabbable
-		ul.nav.nav-tabs
-			li.active
-				a href="#photo" data-toggle="tab" 사진
-			li 
-				a href="#review" data-toggle="tab" 리뷰
-		.tab-content
-			.tab-pane.active#photo
-				.hero-unit
-					p Here Photo
-			.tab-pane#review
-				.hero-unit
-					p Here Review
+			.tabbable
+				ul.nav.nav-tabs
+					li.active
+						a href="#photo" data-toggle="tab" 사진
+					li 
+						a href="#review" data-toggle="tab" 리뷰
+				.tab-content
+					.tab-pane.active#photo
+						.hero-unit
+							p Here Photo
+					.tab-pane#review
+						.hero-unit
+							p Here Review
+		br
+	br

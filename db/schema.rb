@@ -20,13 +20,16 @@ ActiveRecord::Schema.define(:version => 20120922110409) do
     t.string   "address"
     t.date     "date"
     t.string   "time"
-    t.string   "status"
+    t.integer  "status_id",  :default => 0
     t.string   "wish"
-    t.string   "tasknumber"
-    t.string   "runner"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "runner_id",  :default => 0
+    t.integer  "anywork"
+    t.integer  "key_id"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
+
+  add_index "batons", ["key_id"], :name => "index_batons_on_key_id"
 
   create_table "keys", :force => true do |t|
     t.string   "authkey"

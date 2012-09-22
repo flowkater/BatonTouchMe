@@ -1,9 +1,11 @@
 .container
 	br
 	.hero-unit
+		h3 align="center"
+			| 인증번호를 넣고 당신의 바톤을 전달하세요!
 		= simple_form_for(:session, url: sessions_path, html: {class: "form-horizontal"}) do |f|
-			= f.input :authkey, label: "인증키: ", id:"appendInputButton", placeholder: " 인증번호를 넣어주세요!"
-			#createbtn
-				= link_to t('.cancel', :default => t("helpers.links.cancel")), root_path, :class => 'btn'
+			= f.input :authkey, label: false,  id:"appendInputButton", placeholder: " 인증번호를 넣어주세요!"
+			#authbtn
+				= link_to t('.cancel', :default => t("cancel")), root_path, :class => 'btn'
 				'
 				= f.button :submit, "인증하기", class: 'btn btn-primary'
