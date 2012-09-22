@@ -38,4 +38,8 @@ class MainController < ApplicationController
   def regist4
     @baton = Baton.new
   end
+
+  def regist
+    @baton = Baton.new
+  end
 end

@@ -10,7 +10,6 @@ gem 'slim'
 gem 'thin'
 gem 'rmagick'
 gem 'carrierwave'
-gem 'fullcalendar-rails'
 gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
                               :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 gem 'bootstrap-timepicker-rails', :require => 'bootstrap-timepicker-rails',
@@ -28,7 +27,7 @@ group :assets do
   gem 'execjs'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
-  # gem 'twitter-bootstrap-rails'
+  gem 'twitter-bootstrap-rails'
 end
 
 group :development do

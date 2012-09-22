@@ -16,6 +16,8 @@ Batontouchme::Application.routes.draw do
   match '/runners/hulk/regist3', to: 'main#regist3'
   match '/runners/thinkerbell/regist4', to: 'main#regist4'
 
+  match '/runners/regist', to: 'main#regist'
+
   root to: "main#home"
 
   # The priority is based upon order of creation:

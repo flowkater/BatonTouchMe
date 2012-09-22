@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(:version => 20120920115720) do
     t.date     "date"
     t.string   "time"
     t.string   "status"
+    t.string   "wish"
     t.integer  "runner_id"
-    t.integer  "wish_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

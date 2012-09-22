@@ -3,23 +3,23 @@
 		.active.item
 			= image_tag "slide1.png", size: "1940x688"
 			.carousel-caption#carousel-form
-				form
-					.input-apped align="center"
+				form.form-inline accept-charset="UTF-8"
+					.input-appended align="center"
 						input.span8#appendedInputButton
-						button.btn.btn-primary BatonTouch!
+							= link_to "BatonTouch!", runners_regist_path, class: 'btn btn-primary'
 		.item
 			= image_tag "main2.jpg", size: "1940x688"
 			.carousel-caption#carousel-form
-				form
-					.input-apped align="center"
+				form.form-inline
+					.input-appended align="center"
 						input.span8#appendedInputButton
-						button.btn.btn-primary BatonTouch!
+							= link_to "BatonTouch!", runners_regist_path, class: 'btn btn-primary'
 		.item
 			= image_tag "main3.jpg", size: "1940x688"
 			.carousel-caption#carousel-form
-				form
-					.input-apped align="center"
+				form.form-inline
+					.input-appended align="center"
 						input.span8#appendedInputButton
-						button.btn.btn-primary BatonTouch!
+							= link_to "BatonTouch!", runners_regist_path, class: 'btn btn-primary'
 	a.carousel-control.left href="#myCarousel" data-slide="prev" &lsaquo;
 	a.carousel-control.right href="#myCarousel" data-slide="next" &rsaquo;

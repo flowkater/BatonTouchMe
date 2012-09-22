@@ -8,8 +8,8 @@ class CreateBatons < ActiveRecord::Migration
       t.date :date
       t.string :time
       t.string :status
+      t.string :wish
       t.integer :runner_id
-      t.integer :wish_id
 
       t.timestamps
     end
