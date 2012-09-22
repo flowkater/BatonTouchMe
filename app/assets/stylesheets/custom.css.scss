@@ -3,6 +3,14 @@
 abbr{
 	display: none;
 }
+.logosize{
+	width: 100px;
+	height: 100px;
+}
+
+#memachim{
+	margin-left: 50%;
+}
 
 #con-resize{
 	width: 700px;
@@ -39,9 +47,9 @@ abbr{
 	width: 24%;
 }
 
-#baton_taskname, #baton_phone, #baton_address, #baton_date, #baton_time{
+#baton_taskname, #baton_phone, #baton_address, #baton_date, #baton_time,#session_authkey{
 	width: 70%;
-	height: 30px;
+	height: 32px;
 }
 
 #baton_detail{

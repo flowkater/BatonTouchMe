@@ -1,7 +1,9 @@
 .container
-	= form_for(:session, url: sessions_path) do |f|
-		.field
-			= f.label :authkey
-			= f.text_field :authkey
-		.actions
-			= f.submit "인증"
+	br
+	.hero-unit
+		= simple_form_for(:session, url: sessions_path, html: {class: "form-horizontal"}) do |f|
+			= f.input :authkey, label: "인증키: ", id:"appendInputButton", placeholder: " 인증번호를 넣어주세요!"
+			#createbtn
+				= link_to t('.cancel', :default => t("helpers.links.cancel")), root_path, :class => 'btn'
+				'
+				= f.button :submit, "인증하기", class: 'btn btn-primary'

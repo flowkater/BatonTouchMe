@@ -1,8 +1,9 @@
 .container#con-resize
-	.hero-unit#runnerinfo
-		| Casanova's Image + Text
-
+	#runnerinfo
+		= image_tag "casa/casa_main.png"
+		h1 일단, 사람 + 공대생이 할 수 있는 건 왠만하면 다 할 수 있다! 잔심부름 시켜두 돼요! 
 		= link_to "Choose", runners_casanova_regist2_path, class: 'pull-right btn btn-primary'
+	br
 	.tabbable
 		ul.nav.nav-tabs
 			li.active
@@ -11,7 +12,8 @@
 				a href="#review" data-toggle="tab" 리뷰
 		.tab-content
 			.tab-pane.active#photo
-				= image_tag "casa_final.png"
+				= image_tag "casa/casa_final.png"
+				= image_tag "casa/casa_wishlist.png"
 			.tab-pane#review
 				.hero-unit
 					p Here Review
