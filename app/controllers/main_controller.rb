@@ -1,14 +1,14 @@
 #encoding: UTF-8
 class MainController < ApplicationController
-  before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
-                                      :regist3,:regist4,:create,:create1,
-                                      :create2,:create3,:create4]
+  # before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
+                                      # :regist3,:regist4,:create,:create1,
+                                      # :create2,:create3,:create4]
   before_filter :baton_greater, only: [:regist,:regist1,:regist2,
                                       :regist3,:regist4]                                      
-  # before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
-  #                                     :regist3,:regist4,:create,:create1,
-  #                                     :create2,:create3,:create4,
-  #                                     :daniel, :casanova, :hulk, :thinkerbell]
+  before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
+                                      :regist3,:regist4,:create,:create1,
+                                      :create2,:create3,:create4,
+                                      :daniel, :casanova, :hulk, :thinkerbell]
   def home
   end
 
@@ -21,6 +21,7 @@ class MainController < ApplicationController
   def find
     @batons = current_authkey.batons
     @baton = @batons.first
+    @genkeys = current_authkey.genkeys
   end
 
   def daniel

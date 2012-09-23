@@ -5,22 +5,22 @@
 #myCarousel.carousel.slide
 	.carousel-inner
 		.active.item
-			= image_tag "slide2.png", size: "1940x688"
-			.carousel-caption#carousel-form
-				form.form-inline accept-charset="UTF-8"
-					.input-appended align="center"
-						= link_to "BatonTouch NOW!", runners_regist_path, class: 'btn btn-primary batonbtn'
-		.item
 			= image_tag "slide1.png", size: "1940x688"
 			.carousel-caption#carousel-form
 				form.form-inline accept-charset="UTF-8"
 					.input-appended align="center"
 						= link_to "BatonTouch NOW!", runners_regist_path, class: 'btn btn-primary batonbtn'
 		.item
-			= image_tag "main3.jpg", size: "1940x688"
+			= image_tag "slide2.png", size: "1940x688"
 			.carousel-caption#carousel-form
 				form.form-inline accept-charset="UTF-8"
 					.input-appended align="center"
 						= link_to "BatonTouch NOW!", runners_regist_path, class: 'btn btn-primary batonbtn'
+		/ .item
+		/ 	= image_tag "main3.jpg", size: "1940x688"
+		/ 	.carousel-caption#carousel-form
+		/ 		form.form-inline accept-charset="UTF-8"
+		/ 			.input-appended align="center"
+		/ 				= link_to "BatonTouch NOW!", runners_regist_path, class: 'btn btn-primary batonbtn'
 	a.carousel-control.left href="#myCarousel" data-slide="prev" &lsaquo;
 	a.carousel-control.right href="#myCarousel" data-slide="next" &rsaquo;

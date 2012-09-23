@@ -5,6 +5,7 @@
 			div class="alert alert-#{name == :notice ? 'success' : 'error'}"
 				a.close data-dismiss="alert" x
 				= msg
+		p = @genkeys
 		- if @baton
 			h3#batoncenter 내 바톤은 어디에?
 			#batoncenter
@@ -68,7 +69,7 @@
 			#choosebtn
 				= link_to "Runner 고르기", runners_path ,class: 'btn btn-info btn-large'
 				'
-				= link_to "@BatonTouch NOW!", runners_regist_path, class: 'btn btn-success btn-large'
+				= link_to "BatonTouch NOW!", runners_regist_path, class: 'btn btn-success btn-large'
 			br
 			br
 			br
