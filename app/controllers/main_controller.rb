@@ -21,7 +21,6 @@ class MainController < ApplicationController
 
   def find
     @batons = current_authkey.batons
-    @baton = @batons.first
     @genkeys = current_authkey.genkeys
   end
 
@@ -63,7 +62,7 @@ class MainController < ApplicationController
     @baton.anywork = 1
 
     if @baton.save
-      flash[:notice] = "바톤을 등록했습니다! 바톤은 하나만 등록할 수 있습니다^^"
+      flash[:notice] = "바톤을 등록했습니다! 바톤은 5개까지 등록할 수 있습니다^^"
       redirect_to find_path
     else
       flash[:error] = "바톤 등록에 실패했습니다!"
@@ -75,7 +74,7 @@ class MainController < ApplicationController
     @baton = current_authkey.batons.build(params[:baton])
     @baton.runner_id = 1
     if @baton.save
-      flash[:notice] = "바톤을 등록했습니다! 바톤은 하나만 등록할 수 있습니다^^"
+      flash[:notice] = "바톤을 등록했습니다! 바톤은 5개까지 등록할 수 있습니다^^"
       redirect_to find_path
     else
       flash[:error] = "바톤 등록에 실패했습니다!"
@@ -87,7 +86,7 @@ class MainController < ApplicationController
     @baton = current_authkey.batons.build(params[:baton])
     @baton.runner_id = 2
     if @baton.save
-      flash[:notice] = "바톤을 등록했습니다! 바톤은 하나만 등록할 수 있습니다^^"
+      flash[:notice] = "바톤을 등록했습니다! 바톤은 5개까지 등록할 수 있습니다^^"
       redirect_to find_path
     else
       flash[:error] = "바톤 등록에 실패했습니다!"
@@ -99,7 +98,7 @@ class MainController < ApplicationController
     @baton = current_authkey.batons.build(params[:baton])
     @baton.runner_id = 3
     if @baton.save
-      flash[:notice] = "바톤을 등록했습니다! 바톤은 하나만 등록할 수 있습니다^^"
+      flash[:notice] = "바톤을 등록했습니다! 바톤은 5개까지 등록할 수 있습니다^^"
       redirect_to find_path
     else
       flash[:error] = "바톤 등록에 실패했습니다!"
@@ -111,7 +110,7 @@ class MainController < ApplicationController
     @baton = current_authkey.batons.build(params[:baton])
     @baton.runner_id = 4
     if @baton.save
-      flash[:notice] = "바톤을 등록했습니다! 바톤은 하나만 등록할 수 있습니다^^"
+      flash[:notice] = "바톤을 등록했습니다! 바톤은 5개까지 등록할 수 있습니다^^"
       redirect_to find_path
     else
       flash[:error] = "바톤 등록에 실패했습니다!"
@@ -126,8 +125,8 @@ class MainController < ApplicationController
   end
 
   def baton_greater
-    if current_authkey.batons.size >= 1
-      flash[:notice] = "바톤을 한개 이상 생성할 수 없습니다^^"
+    if current_authkey.batons.size >= 5
+      flash[:notice] = "바톤을 5개 이상 생성할 수 없습니다^^"
       redirect_to root_path
     end
   end

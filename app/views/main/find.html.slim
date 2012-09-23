@@ -7,7 +7,7 @@
 				div class="alert alert-#{name == :notice ? 'success' : 'error'}"
 					a.close data-dismiss="alert" x
 					= msg
-			- if @baton
+			- unless @batons.empty?
 			.tabbable
 				ul.nav.nav-tabs
 					li.active
@@ -17,35 +17,36 @@
 				.tab-content
 					.tab-pane.active#baton
 						#infobaton
-							.span6
-								h3 내 바톤은 어디에?
-								p 바톤 이름 : #{@baton.taskname}
-								p 어디서 : #{@baton.address}
-								p 날짜 : #{@baton.date}
-								p 시간 : #{@baton.time}
-								p WishList : #{@baton.wish}
-								- if @baton.status_id.eql?(0)
-									p 상태 : 바톤 전달 완료!
-								- elsif @baton.status_id.eql?(1)
-									p 상태 : 진행중!
-								- elsif @baton.status_id.eql?(2)
-									p 상태 : 터치 다운!(완료!)
-							.span2
-								- if @baton.runner_id.eql?(1)
-									h3 Runner
-									= image_tag "dan_profile.png"
-								- elsif @baton.runner_id.eql?(2)
-									h3 Runner
-									= image_tag "casa_profile.png"
-								- elsif @baton.runner_id.eql?(3)
-									h3 Runner
-									= image_tag "hulk_profile.png"
-								- elsif @baton.runner_id.eql?(4)
-									h3 Runner
-									= image_tag "jen_profile.png"
-								- else
-								  h4 Runner
-								  p 러너가 정해지지 않았습니다^^
+							h3 내 바톤은 어디에?
+							- @batons.each do |baton|
+								.span6
+									h3 바톤 이름 : #{baton.taskname}
+									p 어디서 : #{baton.address}
+									p 날짜 : #{baton.date}
+									p 시간 : #{baton.time}
+									p WishList : #{baton.wish}
+									- if baton.status_id.eql?(0)
+										p 상태 : 바톤 전달 완료!
+									- elsif baton.status_id.eql?(1)
+										p 상태 : 진행중!
+									- elsif baton.status_id.eql?(2)
+										p 상태 : 터치 다운!(완료!)
+								.span2
+									- if baton.runner_id.eql?(1)
+										h3 Runner
+										= image_tag "dan_profile.png"
+									- elsif baton.runner_id.eql?(2)
+										h3 Runner
+										= image_tag "casa_profile.png"
+									- elsif baton.runner_id.eql?(3)
+										h3 Runner
+										= image_tag "hulk_profile.png"
+									- elsif baton.runner_id.eql?(4)
+										h3 Runner
+										= image_tag "jen_profile.png"
+									- else
+									  h4 Runner
+									  p 러너가 정해지지 않았습니다^^
 					.tab-pane#authkey
 						h3 아래는 인증을 위한 번호 #{@genkeys.split(" ").size}개입니다. 당신의 소중한 지인들에게 나눠주세요^^
 						br

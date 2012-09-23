@@ -1,6 +1,6 @@
 Batontouchme::Application.routes.draw do
   resources :reviews
-  resources :batons
+  resources :batons, only: [:index, :create, :update, :destroy, :edit]
 
   resources :keys  
   resources :sessions, only: [:new, :create, :destroy]

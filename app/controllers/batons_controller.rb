@@ -1,13 +1,34 @@
 class BatonsController < ApplicationController
+  before_filter :signed_in_authkey, only: [:index]
   # GET /batons
   # GET /batons.json
   def index
-    @batons = Baton.all
+    if current_authkey.authkey.eql?("#fl0wk27er")
+      @batons = Baton.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @batons }
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @batons }
+      end
+    else
+      redirect_to root_path
     end
+  end
+
+  def daniel
+    
+  end
+
+  def casa
+    
+  end
+
+  def hulk
+    
+  end
+
+  def think
+    
   end
 
   # GET /batons/1
