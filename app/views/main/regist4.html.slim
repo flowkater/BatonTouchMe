@@ -1,6 +1,9 @@
 .container
-  .hero-unit
-    | ThinkerBell's Picture
+  .con-back
+    #runnerinfo
+      = image_tag "jen/main_page.png"
+    br
+    br
   - flash.each do |name, msg|
     div class="alert alert-#{name == :notice ? 'success' : 'error'}"
       a.close data-dismiss="alert" x

@@ -18,17 +18,17 @@ arr << hulk = Authkey.new(authkey:"#hulkh2051",genkeys:"")
 arr << thinker = Authkey.new(authkey:"#genllt5055",genkeys:"")
 
 (0..3).each do |i|
-    (1..25).each do |a|
+    (1..100).each do |a|
        first = Authkey.new(authkey: user_key[i] + gen[0] + a.to_s + user_value[i],genkeys: "")
-       arr[i].genkeys = arr[i].genkeys + first.authkey + " "
+       arr[i].genkeys = arr[i].genkeys + first.authkey + "\n"
        arr[i].save!
-        (1..5).each do |b|
+        (1..10).each do |b|
            second = Authkey.new(authkey: user_key[i] + gen[1] + b.to_s + user_value[i] + a.to_s,genkeys: "")
-           first.genkeys = first.genkeys + second.authkey + " "
+           first.genkeys = first.genkeys + second.authkey + "\n"
            first.save!
-            (1..3).each do |c|
+            (1..5).each do |c|
                third = Authkey.create!(authkey: user_key[i] + gen[2] + c.to_s + user_value[i] + a.to_s + b.to_s, genkeys: "")
-               second.genkeys = second.genkeys + third.authkey + " "
+               second.genkeys = second.genkeys + third.authkey + "\n"
                second.save!
             end
         end

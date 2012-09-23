@@ -1,6 +1,9 @@
 .container
-  .hero-unit
-    | Runners's Picture
+  .con-back
+    #runnerinfo
+      = image_tag "slide1.png"
+    br
+    br
   - flash.each do |name, msg|
     div class="alert alert-#{name == :notice ? 'success' : 'error'}"
       a.close data-dismiss="alert" x

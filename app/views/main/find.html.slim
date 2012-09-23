@@ -1,77 +1,68 @@
 .background
 	br
 	.container#con-resize
-		- flash.each do |name, msg|
-			div class="alert alert-#{name == :notice ? 'success' : 'error'}"
-				a.close data-dismiss="alert" x
-				= msg
-		p = @genkeys
-		- if @baton
-			h3#batoncenter 내 바톤은 어디에?
-			#batoncenter
-				- if @baton.runner_id.eql?(1)
-					p Daniel
-					- if @baton.status_id.eql?(0)
-						p 등록 완료!
-					- elsif @baton.status_id.eql?(1)
-						p 진행중!
-					- elsif @baton.status_id.eql?(2)
-						p 터치 다운!(완료!)
-				- elsif @baton.runner_id.eql?(2)
-					p Casa
-					- if @baton.status_id.eql?(0)
-						p 등록 완료!
-					- elsif @baton.status_id.eql?(1)
-						p 진행중!
-					- elsif @baton.status_id.eql?(2)
-						p 터치 다운!(완료!)
-				- elsif @baton.runner_id.eql?(3)
-					p Hulk
-					- if @baton.status_id.eql?(0)
-						p 등록 완료!
-					- elsif @baton.status_id.eql?(1)
-						p 진행중!
-					- elsif @baton.status_id.eql?(2)
-						p 터치 다운!(완료!)
-				- elsif @baton.runner_id.eql?(4)
-					p ThinkerBell
-					- if @baton.status_id.eql?(0)
-						p 등록 완료!
-					- elsif @baton.status_id.eql?(1)
-						p 진행중!
-					- elsif @baton.status_id.eql?(2)
-						p 터치 다운!(완료!)
-				- else
-					p Anyone
-					- if @baton.status_id.eql?(0)
-						p 등록 완료!
-					- elsif @baton.status_id.eql?(1)
-						p 진행중!
-					- elsif @baton.status_id.eql?(2)
-						p 터치 다운!(완료!)
-				p 바톤 이름 
-				= @baton.taskname
-				p 어디서 
-				= @baton.address
-				p 날짜 
-				= @baton.date
-				p 시간 
-				= @baton.time
-				p 누가 
-				= @baton.runner_id
-				p WishList 
-				= @baton.wish
-		- else
-			br
-			br
-			br
-			h3#batoncenter 바톤을 아직 전달하지 않았어요!
-			#choosebtn
-				= link_to "Runner 고르기", runners_path ,class: 'btn btn-info btn-large'
-				'
-				= link_to "BatonTouch NOW!", runners_regist_path, class: 'btn btn-success btn-large'
-			br
-			br
-			br
 		br
+		.con-back
+			- flash.each do |name, msg|
+				div class="alert alert-#{name == :notice ? 'success' : 'error'}"
+					a.close data-dismiss="alert" x
+					= msg
+			- if @baton
+			.tabbable
+				ul.nav.nav-tabs
+					li.active
+						a href="#baton" data-toggle="tab" 바톤 위치
+					li
+						a href="#authkey" data-toggle="tab" 인증키
+				.tab-content
+					.tab-pane.active#baton
+						#infobaton
+							.span6
+								h3 내 바톤은 어디에?
+								p 바톤 이름 : #{@baton.taskname}
+								p 어디서 : #{@baton.address}
+								p 날짜 : #{@baton.date}
+								p 시간 : #{@baton.time}
+								p WishList : #{@baton.wish}
+								- if @baton.status_id.eql?(0)
+									p 상태 : 바톤 전달 완료!
+								- elsif @baton.status_id.eql?(1)
+									p 상태 : 진행중!
+								- elsif @baton.status_id.eql?(2)
+									p 상태 : 터치 다운!(완료!)
+							.span2
+								- if @baton.runner_id.eql?(1)
+									h3 Runner
+									= image_tag "dan_profile.png"
+								- elsif @baton.runner_id.eql?(2)
+									h3 Runner
+									= image_tag "casa_profile.png"
+								- elsif @baton.runner_id.eql?(3)
+									h3 Runner
+									= image_tag "hulk_profile.png"
+								- elsif @baton.runner_id.eql?(4)
+									h3 Runner
+									= image_tag "jen_profile.png"
+								- else
+								  h4 Runner
+								  p 러너가 정해지지 않았습니다^^
+					.tab-pane#authkey
+						h3 아래는 인증을 위한 번호 #{@genkeys.split(" ").size}개입니다. 당신의 소중한 지인들에게 나눠주세요^^
+						br
+						.key-back
+							h3#genbor = @genkeys
+						= image_tag "batontouch.me.png"
+			- else
+				br
+				br
+				br
+				h3#batoncenter 바톤을 아직 전달하지 않았어요!
+				#choosebtn
+					= link_to "Runner 고르기", runners_path ,class: 'btn btn-info btn-large'
+					'
+					= link_to "BatonTouch NOW!", runners_regist_path, class: 'btn btn-success btn-large'
+				br
+				br
+				br
+			br
 	br

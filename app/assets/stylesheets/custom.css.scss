@@ -11,6 +11,10 @@ abbr{
 .rimg{
 	margin-bottom: 10px;
 }
+#buttonposition{
+	position: relative;
+	top: 20;
+}
 
 #memachim{
 	margin-left: 50%;
@@ -39,6 +43,17 @@ p#title{
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
+}
+
+.key-back{
+	background-color: #fafade;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;	
+}
+
+#genbor{
+	margin: 10 10 10 10;
 }
 
 .con-back{

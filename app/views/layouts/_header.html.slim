@@ -6,6 +6,8 @@ header.navbar.navbar-static-top
 			nav
 				ul.nav
 					li 
+						/ = link_to image_tag("batonis.png"), info_path
+						/ = image_tag "batonis.png", class: "logosize"
 						br= link_to "BatonTouch는?", info_path
 					li 
 						br= link_to "Runner 고르기", runners_path
