@@ -18,7 +18,7 @@ arr << hulk = Authkey.new(authkey:"#hulkh2051",genkeys:"")
 arr << thinker = Authkey.new(authkey:"#genllt5055",genkeys:"")
 
 (0..3).each do |i|
-    (1..32).each do |a|
+    (1..100).each do |a|
        first = Authkey.new(authkey: user_key[i] + gen[0] + a.to_s + user_value[i],genkeys: "")
        arr[i].genkeys = arr[i].genkeys + first.authkey + " "
        arr[i].save!

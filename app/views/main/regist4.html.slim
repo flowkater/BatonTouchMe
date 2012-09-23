@@ -15,7 +15,7 @@
     = f.input :address, label: "주소", hint: "주소를 구체적으로 끝까지 적어주세요!", placeholder: "ex)서울특별시 송파구 문정2동 훼미리 아파트 203동 1705호"
     = f.input :date, label: "날짜", placeholder: "시작 날짜를 선택하세요!", as: :string, input_html: {class: 'datepicker'}
     = f.input :time, label: "시간", placeholder: "일 시작 시간을 선택하세요!", input_html: {class: 'timepicker'}
-    = f.input :wish, label: "Wish List", as: :select, collection:['아따브르 에 한번만 가보고 싶어요~ 점심도 괜찮아.....','예쁜 머리띠나 귀걸이','겟잇뷰티 저렴이 화장품/ 샘플','감성돋는 다이어리','텀블러','스페셜 케이 (곡물)','뒷거래 가능합니다 ;)']
+    = f.input :wish, label: "Wish List", as: :select, collection:['맛있는 점심이나 저녁!','예쁜 머리띠나 귀걸이','겟잇뷰티 저렴이 화장품','감성돋는 다이어리','재밌는 대학로 공연 티켓','추천해주고 싶은 책','살찌긴 하지만 거부 못하는 디저트~!','기타 조율 가능합니다 ;)']
     .form-actions#createbtn
       = link_to t('.cancel', :default => t("helpers.links.cancel")), runners_daniel_path, :class => 'btn'
       '
