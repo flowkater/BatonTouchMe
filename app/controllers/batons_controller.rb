@@ -1,5 +1,5 @@
 class BatonsController < ApplicationController
-  before_filter :signed_in_authkey, only: [:index]
+  before_filter :signed_in_authkey, only: [:index, :edit, :update]
   # GET /batons
   # GET /batons.json
   def index
@@ -10,25 +10,49 @@ class BatonsController < ApplicationController
         format.html # index.html.erb
         format.json { render json: @batons }
       end
+    elsif current_authkey.authkey.eql?("#daneld2130")
+      redirect_to daniel_batons_path
+    elsif current_authkey.authkey.eql?("#cassaj0105")
+      redirect_to casa_batons_path
+    elsif current_authkey.authkey.eql?("#hulkh2051")
+      redirect_to hulk_batons_path
+    elsif current_authkey.authkey.eql?("#genllt5055")
+      redirect_to think_batons_path
     else
       redirect_to root_path
     end
   end
 
   def daniel
-    
+    if current_authkey.authkey.eql?("#daneld2130")
+      @batons = Baton.daniel
+    else
+      redirect_to root_path
+    end
   end
 
   def casa
-    
+    if current_authkey.authkey.eql?("#cassaj0105")
+      @batons = Baton.casa
+    else
+      redirect_to root_path
+    end
   end
 
   def hulk
-    
+    if current_authkey.authkey.eql?("#hulkh2051")
+      @batons = Baton.hulk
+    else
+      redirect_to root_path
+    end
   end
 
   def think
-    
+    if current_authkey.authkey.eql?("#genllt5055")
+      @batons = Baton.think
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /batons/1
@@ -81,7 +105,7 @@ class BatonsController < ApplicationController
 
     respond_to do |format|
       if @baton.update_attributes(params[:baton])
-        format.html { redirect_to @baton, notice: 'Baton was successfully updated.' }
+        format.html { redirect_to batons_path, notice: 'Baton was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

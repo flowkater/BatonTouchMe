@@ -1,6 +1,13 @@
 Batontouchme::Application.routes.draw do
   resources :reviews
-  resources :batons, only: [:index, :create, :update, :destroy, :edit]
+  resources :batons, only: [:index, :create, :update, :destroy, :edit] do
+    collection do
+      get 'daniel'
+      get 'casa'
+      get 'hulk'
+      get 'think'
+    end
+  end
 
   resources :keys  
   resources :sessions, only: [:new, :create, :destroy]
