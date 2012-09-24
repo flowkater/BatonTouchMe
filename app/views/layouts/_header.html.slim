@@ -3,13 +3,20 @@ header.navbar.navbar-static-top
 		.container
 			.brand
 				= link_to image_tag("logo.png", class: "logosize"), root_path
-			nav
+			nav#nav-margin
 				ul.nav
 					li 
-						/ = link_to image_tag("batonis.png"), info_path
-						/ = image_tag "batonis.png", class: "logosize"
-						br= link_to "BatonTouch는?", info_path
+						= link_to info_path do
+							= image_tag("batonis.png", class: "logosize iconadjust")
+							br
+							span BatonTouch는?
+					li
+						= link_to runners_path do
+							= image_tag("chooserunner.png", class: "logosize iconadjust")
+							br
+							span Runner 고르기
 					li 
-						br= link_to "Runner 고르기", runners_path
-					li 
-						br= link_to "내 바톤은 어디에?", find_path
+						= link_to find_path do
+							= image_tag("wherebaton.png", class: "logosize iconadjust")
+							br
+							span 내 바톤은 어디에?

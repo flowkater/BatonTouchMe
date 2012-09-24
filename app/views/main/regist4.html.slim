@@ -12,7 +12,7 @@
     = f.input :taskname, label:"어떤 일을 시키실래요?", placeholder: "ex) 짐 옮겨 주세요!"
     = f.input :phone, label: "전화번호", placeholder: "ex) 010-5555-5555"
     = f.input :detail, label: "세부사항", placeholder: "ex) 부재중에는 경비실에 맡겨주세요! 안에 든 물건이 약하니 파손되지 않도록 신경써주세요!", hint: "일을 할때 필요한 모든 상세사항을 적어주세요!"
-    = f.input :address, label: "주소", hint: "주소를 구체적으로 끝까지 적어주세요!", placeholder: "ex)서울특별시 송파구 문정2동 훼미리 아파트 203동 1705호"
+    = f.input :address, label: "주소", hint: "러너가 일을 수행할 주소를 구체적으로 끝까지 적어주세요!", placeholder: "ex)서울특별시 송파구 문정2동 훼미리 아파트 203동 1705호"
     = f.input :date, label: "날짜", placeholder: "시작 날짜를 선택하세요!", as: :string, input_html: {class: 'datepicker'},hint: "1차 이용가능 기간은 9월 24일부터 9월 28일까지입니다!"
     = f.input :time, label: "시간", placeholder: "일 시작 시간을 선택하세요!", input_html: {class: 'timepicker'},hint: "신청 가능시간은 오전 10시(10:00AM)부터 오후 10시(10:00PM)까지입니다!"
     = f.input :wish, label: "Wish List", as: :select, collection:['맛있는 점심이나 저녁!','예쁜 머리띠나 귀걸이','겟잇뷰티 저렴이 화장품','감성돋는 다이어리','재밌는 대학로 공연 티켓','추천해주고 싶은 책','살찌긴 하지만 거부 못하는 디저트~!','기타 조율 가능합니다 ;)']
