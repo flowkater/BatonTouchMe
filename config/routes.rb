@@ -1,5 +1,5 @@
 Batontouchme::Application.routes.draw do
-  resources :runners
+  # resources :runners
 
   resources :reviews
   resources :batons, only: [:index, :create, :update, :destroy, :edit] do
