@@ -20,7 +20,7 @@
 
 $(document).ready(function(){
 	$('.carousel').carousel({
-		interval: 5000
+		interval: 10000
 	});
 	$('.datepicker').datepicker({"format":"yyyy-mm-dd"});
 	$('.timepicker').timepicker();
