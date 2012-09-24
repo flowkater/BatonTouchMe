@@ -1,4 +1,6 @@
 Batontouchme::Application.routes.draw do
+  resources :runners
+
   resources :reviews
   resources :batons, only: [:index, :create, :update, :destroy, :edit] do
     collection do
@@ -23,6 +25,7 @@ Batontouchme::Application.routes.draw do
   match '/info', to: 'main#info'
   match '/runners', to: 'main#runners'
   match '/find', to: 'main#find'
+  match '/authkeys', to: 'main#authkeys'
 
   match '/runners/daniel', to: 'main#daniel'
   match '/runners/casanova', to: 'main#casanova'

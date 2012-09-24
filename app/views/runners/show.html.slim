@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Mail:
+  = @runner.mail
+p
+  strong Phone:
+  = @runner.phone
+
+= link_to 'Edit', edit_runner_path(@runner)
+'|
+= link_to 'Back', runners_path

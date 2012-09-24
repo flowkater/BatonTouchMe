@@ -3,7 +3,7 @@ class MainController < ApplicationController
   # before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
                                       # :regist3,:regist4,:create,:create1,
                                       # :create2,:create3,:create4]
-  before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
+  before_filter :signed_in_authkey, only: [:find,:authkeys,:regist,:regist1,:regist2,
                                       :regist3,:regist4,:create,:create1,
                                       :create2,:create3,:create4,
                                       :daniel, :casanova, :hulk, :thinkerbell]                                    
@@ -21,7 +21,10 @@ class MainController < ApplicationController
 
   def find
     @batons = current_authkey.batons
-    @genkeys = current_authkey.genkeys
+  end
+
+  def authkeys
+    @genkeys = current_authkey.genkeys   
   end
 
   def daniel

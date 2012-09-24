@@ -11,6 +11,15 @@ abbr{
 	padding-bottom: 0;
 }
 
+#tablogo{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#tabli{
+	margin-top: 6%;
+}
+
 #nav-margin{
 	margin-left: 15%;
 }
@@ -96,6 +105,17 @@ p#title{
 
 .background{
 	background-image: url("/assets/bg.png");
+}
+
+span#choosement{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.chbtn{
+	margin-top: 1%;
+	margin-left: 23%;
+	margin-bottom: 1%;
 }
 
 #runner{

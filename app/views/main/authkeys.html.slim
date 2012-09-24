@@ -1,0 +1,12 @@
+.background
+	br
+	.container#con-resize
+		br
+		.con-back
+			#authkey
+				h3 아래는 인증을 위한 번호 #{@genkeys.split(" ").size}개입니다. 당신의 소중한 지인들에게 나눠주세요^^
+				br
+				.key-back
+					h3#genbor = @genkeys
+				= image_tag "batontouch.me.png"
+		br

@@ -5,18 +5,18 @@ header.navbar.navbar-static-top
 				= link_to image_tag("logo.png", class: "logosize"), root_path
 			nav#nav-margin
 				ul.nav
-					li 
+					li#tabli 
 						= link_to info_path do
-							= image_tag("batonis.png", class: "logosize iconadjust")
-							br
-							span BatonTouch는?
-					li
+							span#tablogo 바톤터치는?						
+					li#tabli
 						= link_to runners_path do
-							= image_tag("chooserunner.png", class: "logosize iconadjust")
-							br
-							span Runner 고르기
-					li 
+							span#tablogo 러너 고르기
+					li#tabli
 						= link_to find_path do
-							= image_tag("wherebaton.png", class: "logosize iconadjust")
-							br
-							span 내 바톤은 어디에?
+							span#tablogo 내 바톤은 어디에?
+					/ li#tabli
+					/ 	= link_to find_path do
+					/ 		span#tablogo 나도 러너 되기!
+					li#tabli
+						= link_to authkeys_path do
+							span#tablogo 인증키 전달하기!
