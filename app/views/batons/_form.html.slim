@@ -1,13 +1,22 @@
 = simple_form_for @baton, :html => { :class => "form-horizontal" } do |f|
-  = f.input :taskname
-  = f.input :phone
-  = f.input :detail
-  = f.input :address
+  = f.input :taskname, disabled: true
+  = f.input :phone, disabled: true
+  = f.input :detail, disabled: true
+  = f.input :address, disabled: true
   = f.input :date
   = f.input :time
-  = f.input :status_id
+  = f.input :status_id, collection: 0..2, as: :radio_buttons
   = f.input :wish
-  = f.input :runner_id
+  - if @baton.runner_id.eql?(0)
+    - if current_authkey.authkey.eql?("#daneld2130")
+      = f.input :runner_id, collection: [0,1], as: :radio_buttons
+    - elsif current_authkey.authkey.eql?("#cassaj0105")
+      = f.input :runner_id, collection: [0,2], as: :radio_buttons
+    - elsif current_authkey.authkey.eql?("#hulkh2051")
+      = f.input :runner_id, collection: [0,3], as: :radio_buttons
+    - elsif current_authkey.authkey.eql?("#genllt5055")
+      = f.input :runner_id, collection: [0,4], as: :radio_buttons
+    
   .form-actions
     = f.button :submit, :class => 'btn-primary'
     '
