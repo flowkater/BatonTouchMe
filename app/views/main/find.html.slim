@@ -27,6 +27,7 @@
 									p WishList : #{baton.wish}
 									- if baton.status_id.eql?(0)
 										p 상태 : 바톤 전달 완료!(등록대기!)
+										= link_to "수정", useredit_baton_path(baton), :class => 'btn btn-info'
 									- elsif baton.status_id.eql?(1)
 										p 상태 : 진행중!
 									- elsif baton.status_id.eql?(2)

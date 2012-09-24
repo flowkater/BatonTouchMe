@@ -7,6 +7,10 @@ Batontouchme::Application.routes.draw do
       get 'hulk'
       get 'think'
     end
+
+    member do
+      get 'useredit'
+    end
   end
 
   resources :keys  

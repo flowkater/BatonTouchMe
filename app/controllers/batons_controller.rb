@@ -1,5 +1,6 @@
+#encoding: UTF-8
 class BatonsController < ApplicationController
-  before_filter :signed_in_authkey, only: [:index, :edit, :update, :daniel, :casa, :hulk, :think]
+  before_filter :signed_in_authkey, only: [:index, :edit,:useredit, :update, :daniel, :casa, :hulk, :think]
   # GET /batons
   # GET /batons.json
   def index
@@ -86,6 +87,10 @@ class BatonsController < ApplicationController
     @baton = Baton.find(params[:id])
   end
 
+  def useredit
+    @baton = Baton.find(params[:id])
+  end
+
   # POST /batons
   # POST /batons.json
   def create
@@ -107,15 +112,14 @@ class BatonsController < ApplicationController
   def update
     @baton = Baton.find(params[:id])
 
-    respond_to do |format|
-      if @baton.update_attributes(params[:baton])
-        format.html { redirect_to batons_path, notice: 'Baton was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @baton.errors, status: :unprocessable_entity }
-      end
+    if @baton.update_attributes(params[:baton])
+      flash[:notice] = "성공적으로 바톤이 수정되었습니다!"
+      redirect_to find_path
+    else
+      flash[:error] = "바톤 등록에 실패했습니다!"
+      render action: "useredit"
     end
+
   end
 
   # DELETE /batons/1

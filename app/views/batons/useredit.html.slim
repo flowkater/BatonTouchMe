@@ -1,0 +1,21 @@
+.container
+  .con-back
+    #runnerinfo
+      = image_tag "slide1.png"
+    br
+    br
+  - flash.each do |name, msg|
+    div class="alert alert-#{name == :notice ? 'success' : 'error'}"
+      a.close data-dismiss="alert" x
+      = msg
+  = simple_form_for @baton, url:{controller:"batons", action: "update"},:html => { :class => "form-horizontal" } do |f|
+    = f.input :taskname, label:"어떤 일을 시키실래요?", disabled: true
+    = f.input :phone, label: "전화번호", disabled: true
+    = f.input :detail, label: "세부사항", hint: "일을 할때 필요한 모든 상세사항을 적어주세요!"
+    = f.input :address, label: "주소", hint: "러너가 일을 수행할 주소를 구체적으로 끝까지 적어주세요!"
+    = f.input :date, label: "날짜", as: :string, input_html: {class: 'datepicker'},hint: "1차 이용가능 기간은 9월 24일부터 9월 28일까지입니다!"
+    = f.input :time, label: "시간",as: :string, input_html: {class: 'timepickeredit'},hint: "신청 가능시간은 오전 10시(10:00AM)부터 오후 10시(10:00PM)까지입니다!"
+    .form-actions#createbtn
+      = link_to "뒤로가기", find_path, :class => 'btn'
+      '
+      = f.button :submit, :class => 'btn-primary'
