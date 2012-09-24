@@ -26,6 +26,7 @@ class BatonsController < ApplicationController
   def daniel
     if current_authkey.authkey.eql?("#daneld2130")
       @batons = Baton.daniel
+      @anys = Baton.anyone
     else
       redirect_to root_path
     end
@@ -34,6 +35,7 @@ class BatonsController < ApplicationController
   def casa
     if current_authkey.authkey.eql?("#cassaj0105")
       @batons = Baton.casa
+      @anys = Baton.anyone
     else
       redirect_to root_path
     end
@@ -42,6 +44,7 @@ class BatonsController < ApplicationController
   def hulk
     if current_authkey.authkey.eql?("#hulkh2051")
       @batons = Baton.hulk
+      @anys = Baton.anyone
     else
       redirect_to root_path
     end
@@ -50,6 +53,7 @@ class BatonsController < ApplicationController
   def think
     if current_authkey.authkey.eql?("#genllt5055")
       @batons = Baton.think
+      @anys = Baton.anyone
     else
       redirect_to root_path
     end

@@ -1,54 +1,113 @@
 - model_class = Baton
 div class="page-header"
   h1=t '.title', :default => model_class.model_name.human.pluralize
-table class="table table-striped"
-  thead
-    tr
-      th= model_class.human_attribute_name(:id)
-      th= model_class.human_attribute_name(:taskname)
-      th= model_class.human_attribute_name(:phone)
-      th= model_class.human_attribute_name(:detail)
-      th= model_class.human_attribute_name(:address)
-      th= model_class.human_attribute_name(:date)
-      th= model_class.human_attribute_name(:time)
-      th= model_class.human_attribute_name(:runner_id)
-      th= model_class.human_attribute_name(:status_id)
-      th= model_class.human_attribute_name(:authkey_id)
-      th= model_class.human_attribute_name(:wish)
-      th= model_class.human_attribute_name(:created_at)
-      th=t '.actions', :default => t("helpers.actions")
-  tbody
-    - @batons.each do |baton|
-      tr
-        td= link_to baton.id, baton_path(baton)
-        td= baton.taskname
-        td= baton.phone
-        td= baton.detail
-        td= baton.address
-        td= baton.date
-        td= baton.time
-        td
-          - if baton.runner_id.eql?(1)
-            | 다니엘
-          - elsif baton.runner_id.eql?(2)
-            | 카사노바
-          - elsif baton.runner_id.eql?(3)
-            | 헐크
-          - elsif baton.runner_id.eql?(4)
-            | 팅커벨
-          - else
-            | 아무나
-        td
-          - if baton.status_id.eql?(0)
-            | 등록대기상태
-          - elsif baton.status_id.eql?(1)
-            | 진행중
-          - elsif baton.status_id.eql?(2)
-            | 완료
-        td= baton.authkey.authkey
-        td= baton.wish
-        td=l baton.created_at
-        td
-          = link_to t('.edit', :default => t("helpers.links.edit")), edit_baton_path(baton), :class => 'btn btn-mini'
+.tabbable
+  ul.nav.nav-tabs
+    li.active
+      a href="#me" data-toggle="tab" Me
+    li
+      a href="#anyone" data-toggle="tab" Anyone
+  .tab-content
+    .tab-pane.active#me
+      table class="table table-striped"
+        thead
+          tr
+            th= model_class.human_attribute_name(:id)
+            th= model_class.human_attribute_name(:taskname)
+            th= model_class.human_attribute_name(:phone)
+            th= model_class.human_attribute_name(:detail)
+            th= model_class.human_attribute_name(:address)
+            th= model_class.human_attribute_name(:date)
+            th= model_class.human_attribute_name(:time)
+            th= model_class.human_attribute_name(:runner_id)
+            th= model_class.human_attribute_name(:status_id)
+            th= model_class.human_attribute_name(:authkey_id)
+            th= model_class.human_attribute_name(:wish)
+            th= model_class.human_attribute_name(:created_at)
+            th=t '.actions', :default => t("helpers.actions")
+        tbody
+          - @batons.each do |baton|
+            tr
+              td= link_to baton.id, baton_path(baton)
+              td= baton.taskname
+              td= baton.phone
+              td= baton.detail
+              td= baton.address
+              td= baton.date
+              td= baton.time
+              td
+                - if baton.runner_id.eql?(1)
+                  | 다니엘
+                - elsif baton.runner_id.eql?(2)
+                  | 카사노바
+                - elsif baton.runner_id.eql?(3)
+                  | 헐크
+                - elsif baton.runner_id.eql?(4)
+                  | 팅커벨
+                - else
+                  | 아무나
+              td
+                - if baton.status_id.eql?(0)
+                  | 등록대기상태
+                - elsif baton.status_id.eql?(1)
+                  | 진행중
+                - elsif baton.status_id.eql?(2)
+                  | 완료
+              td= baton.authkey.authkey
+              td= baton.wish
+              td=l baton.created_at
+              td
+                = link_to t('.edit', :default => t("helpers.links.edit")), edit_baton_path(baton), :class => 'btn btn-mini'
+    .tab-pane#anyone
+      table class="table table-striped"
+        thead
+          tr
+            th= model_class.human_attribute_name(:id)
+            th= model_class.human_attribute_name(:taskname)
+            th= model_class.human_attribute_name(:phone)
+            th= model_class.human_attribute_name(:detail)
+            th= model_class.human_attribute_name(:address)
+            th= model_class.human_attribute_name(:date)
+            th= model_class.human_attribute_name(:time)
+            th= model_class.human_attribute_name(:runner_id)
+            th= model_class.human_attribute_name(:status_id)
+            th= model_class.human_attribute_name(:authkey_id)
+            th= model_class.human_attribute_name(:wish)
+            th= model_class.human_attribute_name(:created_at)
+            th=t '.actions', :default => t("helpers.actions")
+        tbody
+          - @anys.each do |baton|
+            tr
+              td= link_to baton.id, baton_path(baton)
+              td= baton.taskname
+              td= baton.phone
+              td= baton.detail
+              td= baton.address
+              td= baton.date
+              td= baton.time
+              td
+                - if baton.runner_id.eql?(1)
+                  | 다니엘
+                - elsif baton.runner_id.eql?(2)
+                  | 카사노바
+                - elsif baton.runner_id.eql?(3)
+                  | 헐크
+                - elsif baton.runner_id.eql?(4)
+                  | 팅커벨
+                - else
+                  | 아무나
+              td
+                - if baton.status_id.eql?(0)
+                  | 등록대기상태
+                - elsif baton.status_id.eql?(1)
+                  | 진행중
+                - elsif baton.status_id.eql?(2)
+                  | 완료
+              td= baton.authkey.authkey
+              td= baton.wish
+              td=l baton.created_at
+              td
+                = link_to t('.edit', :default => t("helpers.links.edit")), edit_baton_path(baton), :class => 'btn btn-mini'
+
 
 

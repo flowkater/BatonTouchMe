@@ -26,7 +26,7 @@
 									p 시간 : #{baton.time}
 									p WishList : #{baton.wish}
 									- if baton.status_id.eql?(0)
-										p 상태 : 바톤 전달 완료!
+										p 상태 : 바톤 전달 완료!(등록대기!)
 									- elsif baton.status_id.eql?(1)
 										p 상태 : 진행중!
 									- elsif baton.status_id.eql?(2)
