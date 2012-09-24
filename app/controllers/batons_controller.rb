@@ -1,5 +1,5 @@
 class BatonsController < ApplicationController
-  before_filter :signed_in_authkey, only: [:index, :edit, :update]
+  before_filter :signed_in_authkey, only: [:index, :edit, :update, :daniel, :casa, :hulk, :think]
   # GET /batons
   # GET /batons.json
   def index
