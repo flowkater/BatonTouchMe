@@ -32,6 +32,7 @@ class TestersController < ApplicationController
       redirect_to root_path
     else
       flash[:error] = "러너 등록에 실패했습니다."
+      render action: "new"
     end
   end
 end
