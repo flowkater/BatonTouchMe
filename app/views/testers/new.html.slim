@@ -11,5 +11,5 @@
   = simple_form_for @tester,:html => { :class => "form-horizontal" } do |f|
   	= f.input :mail, label: "E-mail", placeholder: "이메일은 필수입니다!"
   	= f.input :phone, label: "전화번호", placeholder: "전화번호를 정확히 입력하시면 우선순위로 연락을 드립니다!"
-  	= f.input :advtg, label: "어떤 일을 잘하시나요?", placeholder: "여러분이 러너가 된다면 어떤 일을 하고 싶으신가요?", as: :text
+  	= f.input :advtg, label: "어떤 일을 잘하시나요?", placeholder: "여러분이 러너가 된다면 어떤 일을 하고 싶으신가요? ex) 전공, 취미, 걍 힘쓰는 일, 같이 밥먹어주기, 놀아주기, 사진 찍어주기 등등 여러분이 할 수 있는 일을 적어주세요.", as: :text
   	= f.submit '신청하기', :class => 'btn btn-primary testsub'

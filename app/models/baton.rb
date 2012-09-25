@@ -1,5 +1,6 @@
 #encoding: UTF-8
 class Baton < ActiveRecord::Base
+	default_scope order: 'updated_at DESC'
 	scope :daniel, where(runner_id:1) 
 	scope :casa, where(runner_id:2) 
 	scope :hulk, where(runner_id:3) 
