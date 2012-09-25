@@ -24,7 +24,7 @@ class MainController < ApplicationController
   end
 
   def authkeys
-    @genkeys = current_authkey.genkeys   
+    @genkeys = current_authkey.genkeys
   end
 
   def daniel

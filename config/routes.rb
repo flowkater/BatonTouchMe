@@ -1,7 +1,7 @@
 Batontouchme::Application.routes.draw do
-  # resources :runners
+  resources :testers, only: [:new, :create]
 
-  resources :reviews
+  # resources :reviews
   resources :batons, only: [:index, :create, :update, :destroy, :edit] do
     collection do
       get 'daniel'

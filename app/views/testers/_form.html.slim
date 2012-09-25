@@ -1,9 +1,10 @@
-= simple_form_for(@runner) do |f|
+= simple_form_for(@tester) do |f|
   = f.error_notification
 
   .form-inputs
     = f.input :mail
     = f.input :phone
+    = f.input :advtg
 
   .form-actions
     = f.button :submit

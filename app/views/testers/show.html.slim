@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Mail:
+  = @tester.mail
+p
+  strong Phone:
+  = @tester.phone
+p
+  strong Advtg:
+  = @tester.advtg
+
+= link_to 'Edit', edit_tester_path(@tester)
+'|
+= link_to 'Back', testers_path

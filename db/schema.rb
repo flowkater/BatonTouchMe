@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120922110409) do
+ActiveRecord::Schema.define(:version => 20120925010118) do
 
   create_table "authkeys", :force => true do |t|
     t.string   "authkey"
@@ -50,5 +50,13 @@ ActiveRecord::Schema.define(:version => 20120922110409) do
   end
 
   add_index "reviews", ["baton_id"], :name => "index_reviews_on_baton_id"
+
+  create_table "testers", :force => true do |t|
+    t.string   "mail"
+    t.string   "phone"
+    t.string   "advtg"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

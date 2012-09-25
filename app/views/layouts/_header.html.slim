@@ -14,9 +14,9 @@ header.navbar.navbar-static-top
 					li#tabli
 						= link_to find_path do
 							span#tablogo 내 바톤은 어디에?
-					/ li#tabli
-					/ 	= link_to find_path do
-					/ 		span#tablogo 나도 러너 되기!
+					li#tabli
+						= link_to new_tester_path do
+							span#tablogo 나도 러너 되기!
 					li#tabli
 						= link_to authkeys_path do
 							span#tablogo 인증키 전달하기!

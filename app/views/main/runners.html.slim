@@ -1,6 +1,6 @@
 .container.con-resize
 	br
-	span#choosement 여러분들의 일을 4명의 러너들에게 맡겨보세요!
+	= image_tag "cancanbaton.png"
 	br
 	br
 .runner-section
@@ -10,22 +10,22 @@
 			= link_to runners_daniel_path do
 				= image_tag "dan_profile.png", size: "320x480", class: "runimg"
 				br
-				button.btn.btn-primary.chbtn Mr.다니엘 보러가기
+				button.btn.btn-primary.chbtn 다니엘에게 전달하기
 		.span3#runner
 			/ .thumbnail
 			= link_to	runners_casanova_path do
 				= image_tag "casa_profile.png",size:"320x480"
 				br
-				button.btn.btn-primary.chbtn 카이스트 카사 보러가기
+				button.btn.btn-primary.chbtn 카사노바에게 전달하기
 		.span3#runner
 			/ .thumbnail
 			= link_to runners_hulk_path do
 				= image_tag "hulk_profile.png",size:"320x480"
 				br
-				button.btn.btn-primary.chbtn 건실한 청년 보러가기
+				button.btn.btn-primary.chbtn 건실청년에게 전달하기
 		.span3#runner
 			/ .thumbnail
 			= link_to runners_thinkerbell_path do
 				= image_tag "jen_profile.png",size:"320x480"
 				br
-				button.btn.btn-primary.chbtn 신녀성 팅커벨 보러가기
+				button.btn.btn-primary.chbtn 팅커벨에게 전달하기
