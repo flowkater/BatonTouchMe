@@ -1,13 +1,13 @@
 #encoding: UTF-8
 class TestersController < ApplicationController
+  before_filter :signed_in_authkey, only: [:index]
   # GET /testers
   # GET /testers.json
   def index
-    @testers = Tester.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @testers }
+    if current_authkey.authkey.eql?("#fl0wk27er")
+      @testers = Tester.all
+    else
+      redirect_to root_path
     end
   end
 
