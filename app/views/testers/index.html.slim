@@ -5,19 +5,12 @@ table
     th Mail
     th Phone
     th Advtg
-    th
-    th
-    th
 
   - @testers.each do |tester|
+
     tr
       td = tester.mail
       td = tester.phone
       td = tester.advtg
-      td = link_to 'Show', tester
-      td = link_to 'Edit', edit_tester_path(tester)
-      td = link_to 'Destroy', tester, :confirm => 'Are you sure?', :method => :delete
 
-br
 
-= link_to 'New Tester', new_tester_path
