@@ -7,16 +7,20 @@ header.navbar.navbar-static-top
 				ul.nav
 					li#tabli 
 						= link_to info_path do
-							span#tablogo 바톤터치는?						
-					li#tabli
-						= link_to runners_path do
-							span#tablogo 바톤 전달하기
-					li#tabli
-						= link_to find_path do
-							span#tablogo 내 바톤은 어디에?
+							= image_tag("batonis.png", size: "64x64", class: "is")
+							br
+							span#tablogo 바톤터치는?				
 					li#tabli
 						= link_to new_tester_path do
-							span#tablogo 나도 러너 되기!
-					li#tabli
-						= link_to authkeys_path do
-							span#tablogo 인증키 전달하기!
+							= image_tag("chooserunner.png", size: "56x64",class: "choo")
+							br
+							span#tablogo 나도 러너 되기!				
+					/ li#tabli
+					/ 	= link_to runners_path do
+					/ 		span#tablogo 바톤 전달하기
+					/ li#tabli
+					/ 	= link_to find_path do
+					/ 		span#tablogo 내 바톤은 어디에?
+					/ li#tabli
+					/ 	= link_to authkeys_path do
+					/ 		span#tablogo 인증키 전달하기!
