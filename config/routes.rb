@@ -37,13 +37,13 @@ Batontouchme::Application.routes.draw do
   match '/runners/hulk/regist3', to: 'main#regist3'
   match '/runners/thinkerbell/regist4', to: 'main#regist4'
 
-  # match '/runners/daniel/create1', to: 'main#create1', via: [:post]
-  # match '/runners/casanova/create2', to: 'main#create2', via: [:post]
-  # match '/runners/hulk/create3', to: 'main#create3', via: [:post]
-  # match '/runners/thinkerbell/create4', to: 'main#create4', via: [:post]
+  match '/runners/daniel/create1', to: 'main#create1', via: [:post]
+  match '/runners/casanova/create2', to: 'main#create2', via: [:post]
+  match '/runners/hulk/create3', to: 'main#create3', via: [:post]
+  match '/runners/thinkerbell/create4', to: 'main#create4', via: [:post]
 
-  # match '/runners/regist', to: 'main#regist'
-  # match '/runners/create', to: 'main#create'
+  match '/runners/regist', to: 'main#regist'
+  match '/runners/create', to: 'main#create'
 
   root to: "main#home"
 

@@ -4,11 +4,11 @@
 		br
 		.con-back
 			#authkey
-				h3 아래는 인증을 위한 번호 개입니다. 당신의 소중한 지인들에게 나눠주세요^^
+				h3 아래는 인증을 위한 번호 0개입니다. 당신의 소중한 지인들에게 나눠주세요^^
 				/ #{@genkeys.split(" ").size}
 				br
 				.key-back
-					h3#genbor 
+					h3#genbor 0
 					/ = @genkeys
 				= image_tag "batontouch.me.png"
 		br
