@@ -3,12 +3,12 @@ class MainController < ApplicationController
   # before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
                                       # :regist3,:regist4,:create,:create1,
                                       # :create2,:create3,:create4]
-  before_filter :signed_in_authkey, only: [:find,:regist,:regist1,:regist2,
-                                      :regist3,:regist4,:create,:create1,
+  before_filter :signed_in_authkey, only: [:find,:regist,
+                                      :create,:create1,
                                       :create2,:create3,:create4]
                                       # :daniel, :casanova, :hulk, :thinkerbell]
-  before_filter :baton_greater, only: [:regist,:regist1,:regist2,
-                                      :regist3,:regist4]                                      
+  # before_filter :baton_greater, only: [:regist,:regist1,:regist2,
+  #                                     :regist3,:regist4]                                      
   
   def home
   end
@@ -40,23 +40,28 @@ class MainController < ApplicationController
   end
 
   def regist1
-    baton   
+    flash[:error] = "테스팅 기간이 끝났습니다!"
+    redirect_to root_path
   end
 
   def regist2
-    baton
+    flash[:error] = "테스팅 기간이 끝났습니다!"
+    redirect_to root_path
   end
 
   def regist3
-    baton
+    flash[:error] = "테스팅 기간이 끝났습니다!"
+    redirect_to root_path
   end
 
   def regist4
-    baton
+    flash[:error] = "테스팅 기간이 끝났습니다!"
+    redirect_to root_path
   end
 
   def regist
-    baton
+    flash[:error] = "테스팅 기간이 끝났습니다!"
+    redirect_to root_path
   end
 
   def create
