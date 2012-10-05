@@ -10,12 +10,12 @@ Batontouchme::Application.routes.draw do
       get 'think'
     end
 
-    # member do
-      # get 'useredit'
-    # end
+    member do
+      get 'useredit'
+    end
   end
 
-  # resources :keys  
+  resources :keys  
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signin', to:'sessions#new'
@@ -23,19 +23,19 @@ Batontouchme::Application.routes.draw do
 
   match '/home', to: 'main#home'
   match '/info', to: 'main#info'
-  # match '/runners', to: 'main#runners'
-  # match '/find', to: 'main#find'
-  # match '/authkeys', to: 'main#authkeys'
+  match '/runners', to: 'main#runners'
+  match '/find', to: 'main#find'
+  match '/authkeys', to: 'main#authkeys'
 
-  # match '/runners/daniel', to: 'main#daniel'
-  # match '/runners/casanova', to: 'main#casanova'
-  # match '/runners/hulk', to: 'main#hulk'
-  # match '/runners/thinkerbell', to: 'main#thinkerbell'
+  match '/runners/daniel', to: 'main#daniel'
+  match '/runners/casanova', to: 'main#casanova'
+  match '/runners/hulk', to: 'main#hulk'
+  match '/runners/thinkerbell', to: 'main#thinkerbell'
 
-  # match '/runners/daniel/regist1', to: 'main#regist1'
-  # match '/runners/casanova/regist2', to: 'main#regist2'
-  # match '/runners/hulk/regist3', to: 'main#regist3'
-  # match '/runners/thinkerbell/regist4', to: 'main#regist4'
+  match '/runners/daniel/regist1', to: 'main#regist1'
+  match '/runners/casanova/regist2', to: 'main#regist2'
+  match '/runners/hulk/regist3', to: 'main#regist3'
+  match '/runners/thinkerbell/regist4', to: 'main#regist4'
 
   # match '/runners/daniel/create1', to: 'main#create1', via: [:post]
   # match '/runners/casanova/create2', to: 'main#create2', via: [:post]
